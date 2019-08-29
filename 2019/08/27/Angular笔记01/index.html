@@ -55,31 +55,33 @@
   };
 </script>
 
-  <meta name="description" content="生命就是一段旅途,而我们一直在前进的路上">
-<meta property="og:type" content="website">
-<meta property="og:title" content="日本社畜生活记录">
-<meta property="og:url" content="http://fukurouzhong.github.io/rizi/index.html">
+  <meta name="description" content="本节目标本文笔记来自于书Angular Up and Running  认识AngularCLI并运用CLI新建一个项目，以及component 认识组件，以及如何将数据绑定到组件中，理解data binding的方式interpolation propoerty binding 封装信息在TypeScript的Class中，使代码更加简洁，模块化  CLI - Command Line Inte">
+<meta name="keywords" content="Angular">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Angular笔记01">
+<meta property="og:url" content="http://fukurouzhong.github.io/rizi/2019/08/27/Angular笔记01/index.html">
 <meta property="og:site_name" content="日本社畜生活记录">
-<meta property="og:description" content="生命就是一段旅途,而我们一直在前进的路上">
+<meta property="og:description" content="本节目标本文笔记来自于书Angular Up and Running  认识AngularCLI并运用CLI新建一个项目，以及component 认识组件，以及如何将数据绑定到组件中，理解data binding的方式interpolation propoerty binding 封装信息在TypeScript的Class中，使代码更加简洁，模块化  CLI - Command Line Inte">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-29T05:58:30.320Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="日本社畜生活记录">
-<meta name="twitter:description" content="生命就是一段旅途,而我们一直在前进的路上">
-  <link rel="canonical" href="http://fukurouzhong.github.io/rizi/">
+<meta name="twitter:title" content="Angular笔记01">
+<meta name="twitter:description" content="本节目标本文笔记来自于书Angular Up and Running  认识AngularCLI并运用CLI新建一个项目，以及component 认识组件，以及如何将数据绑定到组件中，理解data binding的方式interpolation propoerty binding 封装信息在TypeScript的Class中，使代码更加简洁，模块化  CLI - Command Line Inte">
+  <link rel="canonical" href="http://fukurouzhong.github.io/rizi/2019/08/27/Angular笔记01/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
+    isHome: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>日本社畜生活记录</title>
+  <title>Angular笔记01 | 日本社畜生活记录</title>
   
 
 
@@ -205,96 +207,11 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content page-home">
-            
-  <section id="posts" class="posts-expand">
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://fukurouzhong.github.io/rizi/rizi/2019/08/29/Angular笔记02/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XiaoZ">
-      <meta itemprop="description" content="生命就是一段旅途,而我们一直在前进的路上">
-      <meta itemprop="image" content="/rizi/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="日本社畜生活记录">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/rizi/2019/08/29/Angular笔记02/" class="post-title-link" itemprop="url">Angular笔记02(整理中)</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-29 14:36:36 / 修改时间：15:11:10" itemprop="dateCreated datePublished" datetime="2019-08-29T14:36:36+09:00">2019-08-29</time>
-            </span>
-          
+          <div id="content" class="content page-post-detail">
             
 
-            
-          
-
-          
-
-        </div>
-      </header>
-
+  <div id="posts" class="posts-expand">
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Build-in-Angular-Directives"><a href="#Build-in-Angular-Directives" class="headerlink" title="Build-in Angular Directives"></a>Build-in Angular Directives</h1><ul>
-<li>directives and how they are diff from components</li>
-<li>basic directives Angular provides</li>
-<li>where and when to use directives</li>
-</ul>
-<h2 id="directives"><a href="#directives" class="headerlink" title="directives"></a>directives</h2><p>Build-in Structural Directives</p>
-<h3 id="definition"><a href="#definition" class="headerlink" title="definition"></a>definition</h3><h3 id="kinds"><a href="#kinds" class="headerlink" title="kinds"></a>kinds</h3><div class="price" [ngclass]="stockclasses">$ </div>
-
-<p>ngOnInit() {<br>his.stockClasses = {<br>“positive”: this.stock.isPositiveChange(), “negative”: !this.stock.isPositiveChange(), “large-change”: largeChange, “small-change”: !largeChange<br>}; }</p>
-<p>[ngClass] and [class]</p>
-<p>[ngStyle] and [ngClass]</p>
-<p>All struc‐ tural directives in Angular start with an asterisk (*)<br>NgIf<br>NgFor</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
 
   <article class="post" itemscope itemtype="http://schema.org/Article">
   
@@ -313,9 +230,8 @@
       <meta itemprop="name" content="日本社畜生活记录">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/rizi/2019/08/27/Angular笔记01/" class="post-title-link" itemprop="url">Angular笔记01</a>
+        <h1 class="post-title" itemprop="name headline">Angular笔记01
+
           
         </h1>
 
@@ -360,6 +276,14 @@
           
 
           
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
         </div>
       </header>
@@ -370,7 +294,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="本节目标"><a href="#本节目标" class="headerlink" title="本节目标"></a>本节目标</h1><p>本文笔记来自于书Angular Up and Running</p>
+        <h1 id="本节目标"><a href="#本节目标" class="headerlink" title="本节目标"></a>本节目标</h1><p>本文笔记来自于书Angular Up and Running</p>
 <ul>
 <li>认识AngularCLI并运用CLI新建一个项目，以及component</li>
 <li>认识组件，以及如何将数据绑定到组件中，理解data binding的方式<code>interpolation</code> <code>propoerty binding</code></li>
@@ -427,115 +351,73 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">toggleFavorite(event) &#123;</span><br><span class="line">  <span class="keyword">this</span>.stock.favorite = !<span class="keyword">this</span>.stock.favorite;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-        
-      
     </div>
 
     
     
     
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="/rizi/uploads/wechat-qcode.jpg" alt="XiaoZ wechat" style="width: 200px; max-width: 100%;">
+  <div>欢迎扫码订阅微信公众号，分享日本工作机会！</div>
+</div>
 
-    
+      
+        
       
 
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://fukurouzhong.github.io/rizi/rizi/2019/08/26/Bose QC30耳机蓝牙老是连不上/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XiaoZ">
-      <meta itemprop="description" content="生命就是一段旅途,而我们一直在前进的路上">
-      <meta itemprop="image" content="/rizi/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="日本社畜生活记录">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
+      <footer class="post-footer">
+          
             
-            <a href="/rizi/2019/08/26/Bose QC30耳机蓝牙老是连不上/" class="post-title-link" itemprop="url">QC30耳机蓝牙总是连不上</a>
           
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-26 10:23:45" itemprop="dateCreated datePublished" datetime="2019-08-26T10:23:45+09:00">2019-08-26</time>
-            </span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/rizi/categories/杂谈/" itemprop="url" rel="index"><span itemprop="name">杂谈</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>狗圈耳机降噪效果还是很好的，日本的公寓很多隔音效果不是很好，鄙人就运气不太好，隔壁住了一位喜欢整晚开着电视的素未谋面的应该是日本人的邻居，还好我有QC30，晚上打开降噪模式，套上圈圈，连耳塞钱都省了有没有！<br>好像有点扯远，之前QC30蓝牙老是不能被检测到，还以为是耳机的问题。但网上搜寻一番，发现<font color="#dd0000">开机时长按5秒，耳机会亮蓝色的灯，进入配对模式</font>。然后。。。就连上了。连不上的同学可以试试。<br>而且本人QC30的耳机是在国内买的，还在保修期内，人到日本工作之后，左边耳机坏了，出现噪音，然后打了日本这边的售后电话，去便利店寄到付给售后，然后那边直接就会更换新的给你了，日本的服务还真是没得说。</p>
+          <div class="post-tags">
+            
+              <a href="/rizi/tags/Angular/" rel="tag"># Angular</a>
+            
+          </div>
+        
 
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/rizi/2019/08/26/Bose QC30耳机蓝牙老是连不上/" rel="next" title="QC30耳机蓝牙总是连不上">
+                  <i class="fa fa-chevron-left"></i> QC30耳机蓝牙总是连不上
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/rizi/2019/08/29/Angular笔记02/" rel="prev" title="Angular笔记02(整理中)">
+                  Angular笔记02(整理中) <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
         
       </footer>
+    
   </div>
   
   
   
   </article>
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+    
+    
+  <div class="comments" id="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80NjMwMC8yMjgxMQ=="></div>
+  </div>
+  
+  
 
         </div>
           
@@ -550,8 +432,17 @@
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -613,6 +504,23 @@
 
         </div>
       </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#本节目标"><span class="nav-number">1.</span> <span class="nav-text">本节目标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#组件"><span class="nav-number">2.</span> <span class="nav-text">组件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#单向绑定"><span class="nav-number">3.</span> <span class="nav-text">单向绑定</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
@@ -726,6 +634,22 @@
 
 
   
+  <script src="/rizi/js/scrollspy.js?v=7.3.0"></script><script src="/rizi/js/post-details.js?v=7.3.0"></script>
+
+
+<script>
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
 
 </body>
 </html>
